@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hepicure — The Food Boutique</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-shell">
+
+  <div class="login-topbar">
+    <div>
+      <div class="login-brand">
+        <span class="tiffin-mark"></span>
+        <span class="brand-name">Hepicure</span>
+      </div>
+      <div class="login-tag">The Food Boutique</div>
+    </div>
+  </div>
+
+  <div class="login-panel">
+    <div class="login-card">
+      <h2>Welcome</h2>
+      <p class="sub">Sign in to browse today's tiffin menus, track an order, or manage your subscription.</p>
+
+      <div class="field-group">
+        <label class="field-label" for="email-input">Email</label>
+        <div class="field-row">
+          <input type="email" id="email-input" placeholder="you@example.com">
+          <button class="continue-btn" onclick="hepicureContinueEmail()">Continue</button>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="phone-input">Phone number</label>
+        <div class="field-row">
+          <input type="tel" id="phone-input" placeholder="+91 98765 43210">
+          <button class="continue-btn" onclick="hepicureContinuePhone()">Continue</button>
+        </div>
+      </div>
+
+      <div class="divider"><span>or</span></div>
+
+      <button class="skip-btn" onclick="hepicureSkip()">Skip for now</button>
+
+      <div class="login-error" id="login-error"></div>
+      <div class="login-note" id="login-note"></div>
+
+      <div class="login-foot">By continuing you agree to Hepicure's terms &amp; privacy policy.</div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+<script>
+  // If already signed in (or browsing as guest), skip straight to home.
+  hepicureRedirectIfSignedIn();
+</script>
+</body>
+</html>
